@@ -1,0 +1,4 @@
+.image-gallery-slide> img {
+object-fit:cover !important;
+border-radius:10px !important;
+}

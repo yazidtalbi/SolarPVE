@@ -1,8 +1,39 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import MyGallery from "../components/Projects.jsx";
+
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Navigation from "../components/Navigation.astro";
+import Welcome from "../components/Welcome.astro";
+import Services from "../components/Services.astro";
+import Steps from "../components/Steps.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
 ---
 
+<!-- <Navigation />
+-->
+<Welcome /> 
+<Services />
+<div>
+	<div class='container mx-auto'>
+		<h2
+			class='text-3xl font-bold sm:text-4xl my-20 text-blue-950 text-center max-w-3xl mx-auto'
+		>
+			&rsquo; Gedaan met hoge energierekeningen en samen pakken we de
+			klimaatcrisis aan. &rsquo;
+		</h2>
+
+		<MyGallery client:load />
+	</div>
+</div>
+<Steps />
+<Testimonials />
+<Contact />
+<Footer />
+
+<!-- 
 <Layout title="Welcome to Astro.">
 	<main>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
@@ -33,7 +64,7 @@ import Card from '../components/Card.astro';
 			/>
 		</ul>
 	</main>
-</Layout>
+</Layout> -->
 
 <style>
 	main {
