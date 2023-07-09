@@ -248,8 +248,33 @@ import { Icon } from "astro-icon";
 			right: auto;
 		}
 	}
+
+
+	.blurry-gradient {
+  position: absolute;
+    top: -30%;
+    left: 0%;
+  transform: translate(-50%, 0%);
+  width: 800px;
+  height: 800px;
+	border-radius: 50% 22% 40% 80%;  
+	filter: blur(100px);
+  background: radial-gradient(circle at 50% 50%,rgb(255, 123, 0), rgb(255, 255, 255));
+  opacity: 0.35;
+  z-index: -20;
+}
+ 
 </style>
-<div class='container mx-auto w-full'>
+
+
+
+<div class="max-w-xl mx-auto text-center px-5 ">
+	 <h1 class="pt-8 mb-2 text-3xl font-bold text-gray-800 dark:text-white lg:text-4xl font-LiberationSans">
+We bieden 4 verschillende diensten aan</h1>
+           
+</div>
+<div class='container mx-auto w-full relative'>
+	 <div   class="blurry-gradient"></div>
 	<div class='cd-slider'>
 		<ul>
 			<li>

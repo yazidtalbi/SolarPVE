@@ -11,13 +11,29 @@ import Testimonials from "../components/Testimonials.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 ---
+<style>
+		.blurry-gradient-2 {
+  position: absolute;
+    top: 20%;
+    right: 0%;
+  transform: translate(50%, 0%);
+  width: 800px;
+  height: 800px;
+	border-radius: 50% 22% 40% 80%;  
+	filter: blur(100px);
+  background: radial-gradient(circle at 50% 50%,rgb(255, 123, 0), rgb(255, 255, 255));
+  opacity: .5;
+  z-index: -20;
+}
+</style>
 
 <!-- <Navigation />
 -->
 <Welcome /> 
 <Services />
 <div>
-	<div class='container mx-auto'>
+	<div class='container mx-auto relative'>
+			 <div   class="blurry-gradient-2"></div>
 		<h2
 			class='text-3xl font-bold sm:text-4xl my-20 text-blue-950 text-center max-w-3xl mx-auto'
 		>
