@@ -168,6 +168,11 @@ import { Icon } from "astro-icon";
     position: absolute;
     width: 100%;
     PADDING: 60px;
+	  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 	}
 	.prev,
 	.next,
@@ -183,6 +188,7 @@ import { Icon } from "astro-icon";
 		border: 0;
 		cursor: pointer;
 		background: transparent;
+		filter: invert(1);
 	}
 	.prev::before,
 	.next::before {
@@ -224,9 +230,14 @@ import { Icon } from "astro-icon";
 	}
 	.counter {
 		display: inline-block;
-		font-size: 4rem;
-		font-family: serif;
-		font-style: italic;
+		font-size: 1rem;
+		    position: absolute;
+    top: -250%;
+    left: 50%;
+	color:black;
+	font-weight:bold;
+	font-family: 'LiberationSans';
+	opacity:0.5
 	}
 	.counter span:last-child::before {
 		content: "/";
@@ -283,10 +294,25 @@ We bieden 4 verschillende diensten aan</h1>
 					style='background-image:url(https://greenbuildingelements.com/wp-content/uploads/2022/04/Commercial-Solar-Panel-Cost-1024x683.jpg);'
 				>
 				</div>
-				<div class='content p-20'>
+				<div class='content p-20  px-40'>
 					<div class=''>
-						<h2 class='text-white font-bold text-7xl pb-5'>
-							Zonnepanelen
+
+
+						
+						<h2 class='text-white font-bold text-7xl pb-5 flex'>
+							
+							
+							 
+            <img
+                src='../../public/images/pve.svg'
+                class='h-10 mr-6 self-center '
+                alt='PVE Logo'
+            />
+    
+						 
+							
+							<span>Zonnepanelen</span>
+							
 						</h2>
 
 						<a
@@ -299,7 +325,7 @@ We bieden 4 verschillende diensten aan</h1>
 								keuze uit verschillende wattages en tientallen jaren
 								garantie)
 							</div>
-							<div class=''>
+							<div class='pr-20'>
 								<div class='flex items-center lg:text-lg'>
 									<>
 										<div class='mr-4'>
@@ -335,15 +361,141 @@ We bieden 4 verschillende diensten aan</h1>
 			<li>
 				<div
 					class='image'
-					style='background-image:url(https://images.unsplash.com/photo-1421809313281-48f03fa45e9f?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1000);'
+					style='background-image:url(../../public/images/omvormer.jpg);'
 				>
 				</div>
-				<div class='content'>
-					<h2>Jackets Collection 2017</h2>
-					<a href='#'>View Gallery</a>
+				<div class='content p-20  px-40'>
+					<div class=''>
+
+
+						
+						<h2 class='text-white font-bold text-7xl pb-5 flex'>
+							
+							
+							 
+            <img
+                src='../../public/images/pve.svg'
+                class='h-10 mr-6 self-center '
+                alt='PVE Logo'
+            />
+    
+						 
+							
+							<span>Omvormer</span>
+							
+						</h2>
+
+						<a
+							href='#'
+							class='flex flex-wrap w-10/12 justify-between font-bold '
+						>
+							<div class='max-w-lg text-white text-xl opacity-90 '>
+							
+								Een passende 	<span class='text-pve-orange'>omvormer</span>  die de zonne-energie omzet in bruikbare electriciteit
+ 
+							</div>
+							<div class='pr-20'>
+								<div class='flex items-center lg:text-lg'>
+									<>
+										<div class='mr-4'>
+											<Icon
+												name='fe:check'
+												class='inline-bloc text-orange-500 w-10'
+											/>
+										</div>
+										<span class='text-white'
+											>okoqsdqsdqsdqdqsdqsdqsdqskok</span
+										>
+									</>
+								</div>
+								<div class='flex items-center lg:text-lg '>
+									<>
+										<div class='mr-4'>
+											<Icon
+												name='fe:check'
+												class='inline-bloc text-orange-500 w-10'
+											/>
+										</div>
+										<span class='text-white'
+											>okoqsdqsdqsdqdqsdqsdqsdqskok</span
+										>
+									</>
+								</div>
+							</div>
+						</a>
+						<!-- <a href='#' class="max-w-3xl text-white"><span class="text-orange-500">Zonnepanelen</span> die uw verbruik maximaal dekken (top merken met keuze uit verschillende wattages en tientallen jaren garantie)</a> -->
+					</div>
 				</div>
 			</li>
 			<li>
+				<div
+					class='image'
+					style='background-image:url(../../public/images/laadpalen.jpg);'
+				>
+				</div>
+				<div class='content p-20  px-40'>
+					<div class=''>
+
+
+						
+						<h2 class='text-white font-bold text-7xl pb-5 flex'>
+							
+							
+							 
+            <img
+                src='../../public/images/pve.svg'
+                class='h-10 mr-6 self-center '
+                alt='PVE Logo'
+            />
+    
+						 
+							
+							<span>Laadpalen</span>
+							
+						</h2>
+
+						<a
+							href='#'
+							class='flex flex-wrap w-10/12 justify-between font-bold '
+						>
+							<div class='max-w-xl text-white text-xl opacity-90 '>
+							
+								Met een eigen 	<span class='text-pve-orange'>laadpaal</span>  bent u verzekerd van een volle accu als je de weg op gaat en met de zonnepanelen op uw dak kan dit vrijwel gratis gebeuren! 
+							</div>
+							<div class='pr-20'>
+								<div class='flex items-center lg:text-lg'>
+									<>
+										<div class='mr-4'>
+											<Icon
+												name='fe:check'
+												class='inline-bloc text-orange-500 w-10'
+											/>
+										</div>
+										<span class='text-white'
+											>okoqsdqsdqsdqdqsdqsdqsdqskok</span
+										>
+									</>
+								</div>
+								<div class='flex items-center lg:text-lg '>
+									<>
+										<div class='mr-4'>
+											<Icon
+												name='fe:check'
+												class='inline-bloc text-orange-500 w-10'
+											/>
+										</div>
+										<span class='text-white'
+											>okoqsdqsdqsdqdqsdqsdqsdqskok</span
+										>
+									</>
+								</div>
+							</div>
+						</a>
+						<!-- <a href='#' class="max-w-3xl text-white"><span class="text-orange-500">Zonnepanelen</span> die uw verbruik maximaal dekken (top merken met keuze uit verschillende wattages en tientallen jaren garantie)</a> -->
+					</div>
+				</div>
+			</li>
+			<!-- <li>
 				<div
 					class='image'
 					style='background-image:url(https://images.unsplash.com/uploads/1411724908903377d4696/2e9b0cb2?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1000);'
@@ -375,7 +527,7 @@ We bieden 4 verschillende diensten aan</h1>
 					<h2>Winter Collection 2017</h2>
 					<a href='#'>View Gallery</a>
 				</div>
-			</li>
+			</li> -->
 		</ul>
 	</div>
 </div>
