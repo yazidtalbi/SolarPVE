@@ -7,14 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "pve-orange": "#FE8C49",
+      },
       fontFamily: {
-        LiberationSans: [
-          "LiberationSans",
+        liberationsans: [
+          "Liberation Sans",
           "sans-serif",
-          /*...*/ defaultTheme.fontFamily.LiberationSans,
+          /*...*/ defaultTheme.fontFamily.liberationsans,
         ],
       },
     },
   },
   plugins: [require("flowbite/plugin")],
-};
+};  

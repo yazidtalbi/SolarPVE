@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="90" height="149" viewBox="0 0 90 149">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fe8c49;
+      }
+    </style>
+  </defs>
+  <g>
+    <g>
+      <rect y="29" width="30" height="30" class="cls-1"/>
+      <rect x="30" y="15" width="30" height="30" class="cls-1"/>
+      <rect x="60" width="30" height="30" class="cls-1"/>
+    </g>
+    <g>
+      <rect y="74" width="30" height="30" class="cls-1"/>
+      <rect x="30" y="60" width="30" height="30" class="cls-1"/>
+      <rect x="60" y="45" width="30" height="30" class="cls-1"/>
+    </g>
+    <g>
+      <rect y="119" width="30" height="30" class="cls-1"/>
+      <rect x="30" y="105" width="30" height="30" class="cls-1"/>
+      <rect x="60" y="90" width="30" height="30" class="cls-1"/>
+    </g>
+  </g>
+</svg>

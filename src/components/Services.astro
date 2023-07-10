@@ -156,7 +156,7 @@ import { Icon } from "astro-icon";
 	li.prev_slide .image {
 		clip: rect(0, 0, 50rem, 0);
 	}
-	nav {
+	navslide {
 		/* position: absolute; */
 		top: 0;
 		right: 0;
@@ -243,7 +243,7 @@ import { Icon } from "astro-icon";
 		.content {
 			padding-right: 2rem;
 		}
-		nav {
+		navslide {
 			left: 0;
 			right: auto;
 		}
@@ -269,7 +269,7 @@ import { Icon } from "astro-icon";
 
 
 <div class="max-w-xl mx-auto text-center px-5 ">
-	 <h1 class="pt-8 mb-2 text-3xl font-bold text-gray-800 dark:text-white lg:text-4xl font-LiberationSans">
+	 <h1 class="py-8 mb-2 text-3xl font-bold text-gray-800 dark:text-white lg:text-4xl font-LiberationSans">
 We bieden 4 verschillende diensten aan</h1>
            
 </div>
@@ -291,16 +291,29 @@ We bieden 4 verschillende diensten aan</h1>
 
 						<a
 							href='#'
-							class='flex flex-wrap w-10/12 justify-between'
+							class='flex flex-wrap w-10/12 justify-between font-bold '
 						>
-							<div class='max-w-lg text-white text-xl '>
+							<div class='max-w-lg text-white text-xl opacity-90 '>
 								<span class='text-orange-400'>Zonnepanelen</span
 								> die uw verbruik maximaal dekken (top merken met
 								keuze uit verschillende wattages en tientallen jaren
 								garantie)
 							</div>
 							<div class=''>
-								<div class='flex items-center lg:text-lg my-4'>
+								<div class='flex items-center lg:text-lg'>
+									<>
+										<div class='mr-4'>
+											<Icon
+												name='fe:check'
+												class='inline-bloc text-orange-500 w-10'
+											/>
+										</div>
+										<span class='text-white'
+											>okoqsdqsdqsdqdqsdqsdqsdqskok</span
+										>
+									</>
+								</div>
+								<div class='flex items-center lg:text-lg '>
 									<>
 										<div class='mr-4'>
 											<Icon
@@ -375,9 +388,9 @@ We bieden 4 verschillende diensten aan</h1>
 				autoUpdate = true,
 				timeTrans = 4000;
 
-			//create nav
-			var nav = document.createElement("nav");
-			nav.className = "nav_arrows";
+			//create navslide
+			var navslide = document.createElement("navslide");
+			navslide.className = "navslide_arrows";
 
 			//create button prev
 			var prevbtn = document.createElement("button");
@@ -396,17 +409,17 @@ We bieden 4 verschillende diensten aan</h1>
 				"<span>1</span><span>" + items.length + "</span>";
 
 			if (items.length > 1) {
-				nav.appendChild(prevbtn);
-				nav.appendChild(counter);
-				nav.appendChild(nextbtn);
-				item.appendChild(nav);
+				navslide.appendChild(prevbtn);
+				navslide.appendChild(counter);
+				navslide.appendChild(nextbtn);
+				item.appendChild(navslide);
 			}
 
 			items[current].className = "current";
 			if (items.length > 1)
 				items[items.length - 1].className = "prev_slide";
 
-			var navigate = function (dir) {
+			var navslideigate = function (dir) {
 				items[current].className = "";
 
 				if (dir === "right") {
@@ -435,31 +448,31 @@ We bieden 4 verschillende diensten aan</h1>
 			});
 
 			setInterval(function () {
-				if (autoUpdate) navigate("right");
+				if (autoUpdate) navslideigate("right");
 			}, timeTrans);
 
 			prevbtn.addEventListener("click", function () {
-				navigate("left");
+				navslideigate("left");
 			});
 
 			nextbtn.addEventListener("click", function () {
-				navigate("right");
+				navslideigate("right");
 			});
 
-			//keyboard navigation
+			//keyboard navslideigation
 			document.addEventListener("keydown", function (ev) {
 				var keyCode = ev.keyCode || ev.which;
 				switch (keyCode) {
 					case 37:
-						navigate("left");
+						navslideigate("left");
 						break;
 					case 39:
-						navigate("right");
+						navslideigate("right");
 						break;
 				}
 			});
 
-			// swipe navigation
+			// swipe navslideigation
 			// from http://stackoverflow.com/a/23230280
 			item.addEventListener("touchstart", handleTouchStart, false);
 			item.addEventListener("touchmove", handleTouchMove, false);
@@ -484,9 +497,9 @@ We bieden 4 verschillende diensten aan</h1>
 					/*most significant*/
 					if (xDiff > 0) {
 						/* left swipe */
-						navigate("right");
+						navslideigate("right");
 					} else {
-						navigate("left");
+						navslideigate("left");
 					}
 				}
 				/* reset values */
