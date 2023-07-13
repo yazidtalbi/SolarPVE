@@ -4,7 +4,8 @@
   Plugins:
     - @tailwindcss/forms
 -->
-  <h2 class='text-3xl font-bold sm:text-4xl my-20 text-blue-950 text-center max-w-3xl mx-auto '>
+  <h2 class='text-3xl font-bold sm:text-4xl my-20 text-blue-950 text-center max-w-3xl mx-auto relative'>
+     <img class="absolute inset-0  left-20 opacity-50 -top-4 -z-10" src="../../images/pve.svg" alt="" />
                  &rsquo; Maak je klaar voor de verplichte omschakeling naar zonne-energie en laat u begeleiden door PV Energy. &rsquo;
                     </h2>
 
@@ -19,36 +20,69 @@
                         Laten we het milieu sparen door zonnepanelen te gebruiken
                     </h2>
                 <form action='' class='space-y-4'>
-                    <div>
-                        <label class='sr-only' for='name'>Name</label>
-                        <input
-                            class='w-full rounded-md border-1 border-gray-200 p-3 text-sm placeholder-gray-400'
-                            placeholder='Name'
-                            type='text'
-                            id='name'
-                        />
-                    </div>
-
-                    <div class='grid grid-cols-1 gap-4 sm:grid-cols-2'>
+                      <div class='grid grid-cols-1 gap-4 sm:grid-cols-2'>
                         <div>
-                            <label class='sr-only' for='email'>Email</label>
+                            <label class='sr-only' for='email'>Naam*</label>
                             <input
                                 class='w-full rounded-md border-1 border-gray-200 p-3 text-sm placeholder-gray-400'
-                                placeholder='Email address'
+                                placeholder='Naam*'
                                 type='email'
                                 id='email'
                             />
                         </div>
 
                         <div>
-                            <label class='sr-only' for='phone'>Phone</label>
+                            <label class='sr-only' for='phone'>Telefoon*</label>
                             <input
                                 class='w-full rounded-md border-1² border-gray-200 p-3 text-sm placeholder-gray-400'
-                                placeholder='Phone Number'
+                                placeholder='Telefoon*'
                                 type='tel'
                                 id='phone'
                             />
                         </div>
+                    </div>
+
+                         <div>
+                        <label class='sr-only' for='straat'>Straat + Nr.</label>
+                        <input
+                            class='w-full rounded-md border-1 border-gray-200 p-3 text-sm placeholder-gray-400'
+                            placeholder='Straat + Nr.*'
+                            type='text'
+                            id='straat'
+                        />
+                    </div>
+
+                    <div class='flex space-x-4'>
+                        <div class="">
+                            <label class='sr-only' for='email'>Naam*</label>
+                            <input
+                                class='flex-1 w-32 rounded-md border-1 border-gray-200 p-3 text-sm placeholder-gray-400'
+                                placeholder='Postcode'
+                                type='email'
+                                id='email'
+                            />
+                        </div>
+
+                        <div class=""     style="width: -webkit-fill-available;">
+                            <label class='sr-only' for='phone'>Telefoon*</label>
+                            <input
+                                class='flex-1 w-full rounded-md border-1 border-gray-200 p-3 text-sm placeholder-gray-400'
+                                placeholder='Stad'
+                                type='tel'
+                                id='phone'
+                           
+                            />
+                        </div>
+                    </div>
+
+                        <div>
+                        <label class='sr-only' for='name'>E-mail</label>
+                        <input
+                            class='w-full rounded-md border-1 border-gray-200 p-3 text-sm placeholder-gray-400'
+                            placeholder='Email*'
+                            type='email'
+                            id='email'
+                        />
                     </div>
 
                     <!-- <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
@@ -89,22 +123,14 @@
                         </div>
                     </div> -->
 
-                    <div>
-                        <label class='sr-only' for='message'>Message</label>
+                
 
-                        <textarea
-                            class='w-full rounded-md border-1 border-gray-200 p-3 text-sm placeholder-gray-400'
-                            placeholder='Message'
-                            rows='8'
-                            id='message'></textarea>
-                    </div>
-
-                    <div class='mt-4'>
+                    <div class='mt-4 float-right'>
                         <button
                             type='submit'
-                            class='inline-block w-full rounded-md border-1 bg-sky-950 px-5 py-3 font-medium text-white sm:w-auto'
+                            class='inline-block w-full rounded-md border-1 bg-sky-950 px-5 py-3 font-bold text-white sm:w-auto'
                         >
-                            Send Enquiry
+                            Indienen
                         </button>
                     </div>
                 </form>
