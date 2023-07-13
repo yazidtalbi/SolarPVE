@@ -1,47 +1,22 @@
 ---
 import { Icon } from "astro-icon";
+import Drawer from "./Drawer.astro";
 
 ---
  
-<div class='flex flex-col justify-center max-w-7xl mx-auto relative pt-5'>
-     	<h2
+ 	<h2
 			class='text-3xl font-bold sm:text-4xl my-20 text-blue-950 text-center max-w-3xl mx-auto'
 		>
 			Wil je enkel zonnepalen?
 Of liever in combinatie met een thuisbatterij en/of een laadpaal?
 		</h2>
-    <div
-        class='justify-between relative flex flex-col md:flex-row md:space-x-5 md:space-y-0 rounded-xl   mx-auto    container max-w-7xl  z-30 '
-    >
-        <div class='w-full md:w-2/3 flex flex-col space-y-2'>
-            <!-- <div class="flex justify-between item-center">
-					<p class="text-gray-500 font-medium hidden md:block">Vacations</p>
-					<div class="flex items-center">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 20 20"
-							fill="currentColor">
-							<path
-								d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-						</svg>
-						<p class="text-gray-600 font-bold text-sm ml-1">
-							4.96
-							<span class="text-gray-500 font-normal">(76 reviews)</span>
-						</p>
-					</div>
-					<div class="">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pink-500" viewBox="0 0 20 20"
-							fill="currentColor">
-							<path fill-rule="evenodd"
-								d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-								clip-rule="evenodd" />
-						</svg>
-					</div>
-					<div class="bg-gray-200 px-3 py-1 rounded-full text-xs font-medium text-gray-800 hidden md:block">
-						Superhost</div>
-				</div> -->
 
-            <div class='flex items-center lg:text-lg pt-5'>
+<div class="flex justify-between max-w-7xl mx-auto space-x-8">
+
+
+            <div class='flex items-center lg:text-lg pt-5 '>
                 <>
-                    <div class='mr-4 mt-1 self-start'>
+                    <div class='mr-4 mt-1 '>
                         <Icon
                             name='mdi:square'
                             class='inline-bloc text-pve-orange w-8'
@@ -60,27 +35,11 @@ Of liever in combinatie met een thuisbatterij en/of een laadpaal?
                     </div>
                 </>
             </div>
+<div><Drawer/></div>
 
-            <!-- <p class="text-xl font-black text-gray-800">
-					$110
-					<span class="font-normal text-gray-600 text-base">/night</span>
-				</p> -->
-        </div>
+</div>
 
-        <div
-            class='grid place-items-center relative cta h-52 w-60 place-self-center overflow-hidden'
-        >
-            <p
-                class='text-white z-10 absolute left-0 bottom-0 p-7 font-bold text-lg'
-            >
-                Ontdek uw jaarverbruik
-            </p>
-            <img
-                class='rounded-xl'
-                src='https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
-                alt='click'
-            />
-        </div>
-    </div>
+
+ 
     <div class='blurry-gradient-3'></div>
 </div>
