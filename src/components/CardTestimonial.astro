@@ -1,5 +1,12 @@
+---
+export interface Props{
+    item: any;
+}
+
+const {item} = Astro.props;
+---
 <section
-    class='relative p-6 text-sm leading-6 bg-white   rounded-lg border-gray-200/60 max-w-md'
+    class='relative p-6 text-sm leading-6 bg-white rounded-lg border-gray-200/60 max-w-md min-h-full font-liberationsans'
 >
     <div class='flex items-center space-x-6 '>
         <!-- <img
@@ -11,13 +18,12 @@
         <div class='flex-auto'>
             <a
                 href='https://twitter.com/Axelut'
-                class='text-base font-semibold text-orange-400  '
-                >Danny en Marianne </a
-            ><div class=' -mt-1 text-gray-400  '>
-                Harelbeke
+                class='text-2xl font-semibold text-orange-400  '
+                >{item.alias}</a
+            ><div class=' -mt-1 text-gray-300  text-lg font-bold '>
+                {item.place}
             </div>
         </div>
-    </div><p class='mt-4 text-gray-500'>
-      Onze installatie laten plaatsen door PVE was de juiste keuze. Wij kregen vriendelijke en competente installateurs over de vloer, de kwaliteit van het materiaal was (volgens een beetje google research) van hoge kwaliteit en toch was de prijs lager dan alle andere bedrijven die hun offerte hebben aangeboden. 
-    </p>
+    </div><p class='mt-4 text-gray-500 text-lg font-liberationsans font-bold ' >
+     {item.text}</p>
 </section>

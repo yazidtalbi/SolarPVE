@@ -1,7 +1,47 @@
 ---
 import CardTestimonial from "./CardTestimonial.astro";
 
+  const testimonials = [
+    {
+      alias: "Danny en Marianne",
+      place: "Harelbeke",
+      text: "Onze installatie laten plaatsen door PVE was de juiste keuze. Wij kregen vriendelijke en competente installateurs over de vloer, de kwaliteit van het materiaal was (volgens een beetje google research) van hoge kwaliteit en toch was de prijs lager dan alle andere bedrijven die hun offerte hebben aangeboden. ",
+    },
+    {
+      alias: "Abdel",
+      place: "Kortrijk",
+      text: "5 offertes aangevraagd, PVE was de goedkoopste. Ze werken snel en proper.",
+    },
+    {
+      alias: "Els",
+      place: "Roeselare",
+      text: "Mijn schoonzus had bij hun laten plaatsen, ze zei me dat alles prima was verlopen. Dus eigenlijk zonder nadenken bij hun besteld. En jawel, kwaliteitsmateriaal + fijne afwerking. Goed gedaan mannen van PVE!",
+    },
+    {
+      alias: "Dennis",
+      place: "Kortrijk",
+      text: "Voor de perfectionist als ik ben, was het toch een beetje stressen hoe mijn dak er zou uitzien achteraf. Je hoort veel negatieve verhalen. Ik kreeg van deze firma vooraf een volledig 3D plan, er werd me gegarandeerd dat het er zo ging uitzien. Achteraf bekeken ziet het er beter uit dan op het plan. Heel blij! ",
+    },
+    {
+      alias: "Pietro",
+      place: "Waregem",
+      text: "Zag via een facebookadvertentie: 10 panelen + 1 omvormer + 1 batterij bij de firma ‘PVE’. Na aftrek van de subsidie heb ik alles inclusief 7250€ betaald. Nu nie voor het een of het ander, maar zo goedkoop heb ik ze toch nog niet tegengekomen, en met de professionele service erbovenop kan ik ze alleen maar aanraden.",
+    },
+    {
+      alias: "Sven en Pieter",
+      place: "Roeselare",
+      text: "Had gehoord van deze firma via via en per mail was de offferteprijs scherp. Heb ze laten komen met vraag of ze konden plaatsen voor ik op vakantie vertrok, zodat ik alles nog kon checken en uittesten en hebben me gegarandeerd dat ze binnen 10 dagen konden starten en dezelfde dag gingen klaarzijn. En zo geschiede. Good job! Applicatie werkt perfect, ook in het buitenland kan je alles netjes volgen. !",
+    },
+  ];
+
+ 
+
+  const { alias, place, text } = Astro.props;
+
 ---
+
+
+
 
 <style is:global>
     :root {
@@ -199,8 +239,8 @@ body {
 </style>
 
 
- <section class="mt-20  bg-cover bg-no-repeat" style="background-image: url(../images/gradient-1.png);background-position: center; height:600px; min-width:100%">
-        <div class="max-w-2xl   mx-auto text-center py-16">
+ <section class="mt-20 bg-cover bg-no-repeat h-full" style="background-image: url(../images/gradient-1.png);background-position: center; min-width:100%">
+        <div class="max-w-2xl   mx-auto text-center mt-10 py-16">
             <h1 class="text-3xl font-bold text-gray-800 dark:text-white lg:text-4xl font-LiberationSans">PVE heeft al het leven van veel mensen veranderd, ontdek onze impact</h1>
             
         </div>
@@ -224,18 +264,18 @@ body {
 <article class='wrapper mt-10'>
     <div class='marquee'>
         <div class='marquee__group'>
-            <CardTestimonial/>
-            <CardTestimonial/>
-            <CardTestimonial/>
-            <CardTestimonial/>
-            <CardTestimonial/>
+
+  
+        {testimonials.map((item) =>   <CardTestimonial item={item}  client:visible/>)}
+
+   
+      
         </div>
         <div  aria-hidden='true' class='marquee__group'>
-            <CardTestimonial/>
-            <CardTestimonial/>
-            <CardTestimonial/>
-            <CardTestimonial/>
-            <CardTestimonial/>
+
+             {testimonials.map((item) =>   <CardTestimonial item={item}  client:visible/>)}
+
+      
         </div>
 
         <!-- <div aria-hidden='true' class='marquee__group'>
