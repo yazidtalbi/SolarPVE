@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon";
+import Logo from "./Logo.astro";
 
 ---
 
@@ -29,13 +30,11 @@ import { Icon } from "astro-icon";
  
 
 
-    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 border-y border-gray-300 py-16 font-bold">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 border-y border-gray-300 py-16 font-bold ">
       <div class="">
-        <div class="text-teal-600 pb-2">
-     Test
-        </div>
+      <Logo/>
 
-        <p class="mt-4 max-w-xs text-gray-500">
+        <p class="mt-10 max-w-xs text-gray-500">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non cupiditate quae nam molestias.
         </p>
 
@@ -193,6 +192,6 @@ import { Icon } from "astro-icon";
       </div>
     </div>
 
-    <p class="text-sm text-gray-500 -pt-6">&copy; 2023. Solar PVE. All rights reserved.</p>
+    <p class="text-sm text-gray-500  font-bold font-LiberationSans ">&copy; 2023. Solar PVE. Alle rechten voorbehouden.</p>
   </div>
 </footer>
